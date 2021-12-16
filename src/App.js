@@ -6,6 +6,7 @@ import AuthProvider from './context/AuthProvider';
 import Navigation from './shared/Navigation';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="home" element={<Home />}> </Route>
           <Route exact path="login" element={<Login />}> </Route>
           <Route exact path="register" element={<Register />}> </Route>
+          <Route exact path="dashboard" element={<Dashboard />}> </Route>
 
           <Route path="*" element={<NotFound />}> </Route>
 
