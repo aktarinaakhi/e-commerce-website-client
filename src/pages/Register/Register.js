@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 const Register = () => {
 
     const [loginData, setLoginData] = useState({});
-    const { user, registerUser, isLoading, error, signInWithGoogle } = useAuth();
+    const { user, registerUser, isLoading, error, signInWithGoogle, logOut } = useAuth();
     const history = useNavigate();
 
     const handleSubmit = e => {
@@ -41,7 +41,7 @@ const Register = () => {
                     <form onSubmit={handleSubmit} className="mt-8 space-y-6 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="#" method="POST">
 
                         <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                                 Email
                             </label>
                             <input
@@ -54,7 +54,7 @@ const Register = () => {
                         </div>
 
                         <div className="mb-6">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                                 Password
                             </label>
                             <input
@@ -68,7 +68,7 @@ const Register = () => {
                         </div>
 
                         <div className="mb-6">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                                 Re-Enter Password
                             </label>
                             <input
@@ -85,7 +85,7 @@ const Register = () => {
                         <div className="flex items-center justify-between">
                             <div className="flex items-center">
                                 <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" />
-                                <label for="remember-me" className="ml-2 block text-sm text-gray-900">
+                                <label htmlhtmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                                     Remember me
                                 </label>
                             </div>
@@ -114,7 +114,7 @@ const Register = () => {
                             <span className="absolute left-0 inset-y-0 flex items-center pl-3">
 
                                 <svg className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                                 </svg>
                             </span>
                             Continue With Google
