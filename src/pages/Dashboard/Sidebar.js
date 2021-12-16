@@ -5,27 +5,32 @@ import useAuth from '../../hooks/useAuth';
 const Sidebar = () => {
     const { admin, logOut } = useAuth();
     return (
-        <div>
+        <div className='shadow-lg'>
             <nav>
 
                 <ul className='py-2'>
 
-                    {!admin && <div className='flex flex-col'>
-                        <NavLink className='hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3' as={Link} to="/myOrders">My Orders</NavLink>
-                        <NavLink className='hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3' as={Link} to="/review">Add Review</NavLink>
-                        <NavLink className='hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3' as={Link} to="/pay">Pay</NavLink>
+                    {!admin && <div className='flex flex-col text-center'>
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/myOrders">My Orders</NavLink>
 
-                        <button style={{ width: '100%', textAlign: 'left' }} className="hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3" onClick={() => logOut()}>Logout</button>
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/review">Add Review</NavLink>
+
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/pay">Pay</NavLink>
+
+                        <button className="hover:border-gray-500 border-transparent border rounded-sm p-3" onClick={() => logOut()}>Logout</button>
 
                     </div>}
 
-                    {admin && <div className='flex flex-col'>
-                        <NavLink className='hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3' as={Link} to="/manageOrders">Manage All Orders</NavLink>
-                        <NavLink className='hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3' as={Link} to="/addProducts">Add a Products</NavLink>
-                        <NavLink className='hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3' as={Link} to="/manageProducts">Manage Products</NavLink>
-                        <NavLink className='hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3' as={Link} to="/admin">Make Admin</NavLink>
+                    {admin && <div className='flex flex-col text-center'>
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/manageAllOrders">Manage All Orders</NavLink>
 
-                        <button style={{ width: '100%', textAlign: 'left' }} className="hover:border-blue-500 border-b-2 border-l-2 p-2 rounded-sm mb-3" onClick={() => logOut()}>Logout</button>
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/addProducts">Add a Products</NavLink>
+
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/manageAllProducts">Manage Products</NavLink>
+
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/makeAdmin">Make Admin</NavLink>
+
+                        <button className='hover:border-gray-500 border-transparent border rounded-sm p-3' onClick={() => logOut()}>Logout</button>
 
                     </div>}
                 </ul>

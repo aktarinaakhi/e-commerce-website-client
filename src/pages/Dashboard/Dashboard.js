@@ -13,7 +13,6 @@ const Dashboard = ({ children }) => {
                     </div>
                     <div className="sm:basis-full md:basis-3/4 lg:basis-3/4">
                         {children}
-                        <h2>dg fh</h2>
                     </div>
 
 

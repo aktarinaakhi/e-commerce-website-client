@@ -6,6 +6,7 @@ const Home = () => {
         <div className='md:container md:mx-auto'>
 
             <Banner></Banner>
+            
         </div>
     );
 };
