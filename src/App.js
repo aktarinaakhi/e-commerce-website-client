@@ -14,6 +14,8 @@ import MakeAdmin from './pages/Dashboard/Admin/MakeAdmin';
 
 function App() {
   return (
+
+
     <AuthProvider>
       <BrowserRouter>
         <Navigation />
