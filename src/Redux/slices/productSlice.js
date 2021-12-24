@@ -1,30 +1,53 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
-  value: 0,
-}
+// First, create the thunk
+export const fetchProducts = createAsyncThunk(
+  'products/fetchProducts',
+  async () => {
+    const response = await fetch('http://localhost:5000/products')
+      .then(res => res.json())
+    console.log(response);
+    return response;
+  }
+)
 
-export const productSlice = createSlice({
+const productSlice = createSlice({
   name: 'products',
-  initialState,
+  initialState: {
+    gaming: [],
+    gift: [],
+    home: [],
+    mobile: [],
+    maleFashion: [],
+    femaleFashion: [],
+    baby: [],
+    ComputerAndAccesories: [],
+    toysAndSport: [],
+    status: 'idle'
+  },
+
   reducers: {
-    increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1
+    gamingProducts: (state, { payload }) => {
+      state.gaming = state.response.filter(gamingProduct => gamingProduct.category === 'Gaming accessories');
     },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+
+    giftProducts: (state, { payload }) => {
+      state.readingList = state.readingList.filter(book => book.id !== payload.id);
     },
   },
-})
+  extraReducers: (builder) => {
+    builder.addCase(fetchProducts.fulfilled, (state, action) => {
+      state.discover = action.payload;
+      state.status = 'success'
+    })
+    builder.addCase(fetchProducts.pending, (state, action) => {
+      state.status = 'pending';
+    })
+  },
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = productSlice.actions
+});
 
-export default productSlice.reducer
+export const { gamingProducts, giftProducts } = productSlice.actions;
+
+export default productSlice.reducer;
+
