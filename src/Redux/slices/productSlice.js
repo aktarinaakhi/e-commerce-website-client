@@ -11,15 +11,15 @@ export const fetchProducts = createAsyncThunk(
   }
 )
 
-const productSlice = createSlice({
+export const productSlice = createSlice({
   name: 'products',
   initialState: {
     gaming: [],
     gift: [],
     home: [],
     mobile: [],
-    maleFashion: [],
-    femaleFashion: [],
+    male: [],
+    female: [],
     baby: [],
     ComputerAndAccesories: [],
     toysAndSport: [],
@@ -27,8 +27,9 @@ const productSlice = createSlice({
   },
 
   reducers: {
-    gamingProducts: (state, { payload }) => {
-      state.gaming = state.response.filter(gamingProduct => gamingProduct.category === 'Gaming accessories');
+    gamingProducts: (state) => {
+      state.gaming.push('gaming')
+      // console.log(state.gaming =='gaming');
     },
 
     giftProducts: (state, { payload }) => {
