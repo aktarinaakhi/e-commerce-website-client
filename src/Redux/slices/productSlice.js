@@ -17,10 +17,10 @@ export const productSlice = createSlice({
     gaming: [],
     gift: [],
     home: [],
-    mobile: [],
     male: [],
     female: [],
     baby: [],
+    mobile: [],
     ComputerAndAccesories: [],
     toysAndSport: [],
     status: 'idle'
@@ -37,6 +37,9 @@ export const productSlice = createSlice({
       state.gaming = action.payload
       state.home = action.payload
       state.gift = action.payload
+      state.female = action.payload
+      state.male = action.payload
+      state.baby = action.payload
       state.status = 'success'
     })
 

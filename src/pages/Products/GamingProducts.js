@@ -1,3 +1,5 @@
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from '../../Redux/slices/productSlice';
@@ -5,16 +7,12 @@ import { fetchProducts } from '../../Redux/slices/productSlice';
 const GamingProducts = () => {
 
     const dispatch = useDispatch();
-
     useEffect(() => {
         dispatch(fetchProducts());
     }, [])
 
     const productState = useSelector(state => state.products.gaming);
-
     const gamingState = productState.filter(gaming => gaming.category === 'Gaming accessories')
-    // console.log(gamingState);
-
 
 
     return (
@@ -23,7 +21,11 @@ const GamingProducts = () => {
             <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div className='flex justify-between'>
                     <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Gaming accessories</h2>
-                    <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mb-2'>See more</button>
+
+                    <div className='text-blue-700'>
+                        <button className='bg-transparent mr-2 mb-4'>See more</button>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                    </div>
 
                 </div>
                 <hr />

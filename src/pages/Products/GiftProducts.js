@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Slider from 'react-slick';
-
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
     EffectCoverflow, Pagination
@@ -9,22 +7,13 @@ import SwiperCore, {
 import "swiper/css";
 import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
-import { fetchProducts } from '../../Redux/slices/productSlice';
 
 const GiftProducts = () => {
     SwiperCore.use([EffectCoverflow, Pagination]);
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchProducts());
-    }, [])
-
     const giftState = useSelector(state => state.products.gift);
 
     const giftProducts = giftState.filter(homeProduct => homeProduct.category === 'gift')
-    console.log(giftProducts);
-
 
 
     return (
