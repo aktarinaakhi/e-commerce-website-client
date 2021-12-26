@@ -14,7 +14,7 @@ const HomeAndKitchenProducts = () => {
     const homeProducts = homeState.filter(homeProduct => homeProduct.category === 'Home and kitchen')
     console.log(homeProducts);
     return (
-        <div className="bg-white top-0">
+        <div className="bg-white">
             <div className="max-w-2xl mx-auto py-16 px-4 lg:py-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div className='flex justify-between'>
                     <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Home and Kitchen</h2>

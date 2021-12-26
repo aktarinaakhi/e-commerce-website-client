@@ -36,6 +36,7 @@ export const productSlice = createSlice({
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.gaming = action.payload
       state.home = action.payload
+      state.gift = action.payload
       state.status = 'success'
     })
 
