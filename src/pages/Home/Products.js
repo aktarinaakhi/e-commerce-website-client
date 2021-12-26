@@ -1,15 +1,22 @@
 import React from 'react';
 import GamingProducts from '../Products/GamingProducts'
+import HomeAndKitchenProducts from '../Products/HomeAndKitchenProducts';
 
 const Products = () => {
     return (
-        <div className='grid grid-cols-1 '>
+        <>
             <div>
                 <GamingProducts></GamingProducts>
             </div>
 
+            <div>
+                <HomeAndKitchenProducts></HomeAndKitchenProducts>
+            </div>
+        </>
 
-        </div>
+
+
+
     );
 };
 

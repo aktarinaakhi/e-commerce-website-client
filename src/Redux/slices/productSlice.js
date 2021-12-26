@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async () => {
-    const response = await fetch('https://mocki.io/v1/a5348454-d073-4942-a994-6c99be23f217')
+    const response = await fetch('http://localhost:5000/products')
       .then(res => res.json())
     console.log(response);
     return response;
@@ -35,8 +35,10 @@ export const productSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.gaming = action.payload
+      state.home = action.payload
       state.status = 'success'
     })
+
     builder.addCase(fetchProducts.pending, (state, action) => {
       state.status = 'pending';
     })
@@ -44,7 +46,7 @@ export const productSlice = createSlice({
 
 });
 
-export const { gamingProducts, giftProducts } = productSlice.actions;
+export const { gamingProducts, giftProducts, gaming, home } = productSlice.actions;
 
 export default productSlice.reducer;
 
