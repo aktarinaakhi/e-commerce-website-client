@@ -16,30 +16,33 @@ import MakeAdmin from './pages/Dashboard/Admin/MakeAdmin';
 function App() {
   return (
 
-
-    <AuthProvider>
-      <BrowserRouter>
-        <Navigation />
-        <Routes>
-
-          <Route exact path="/" element={<Home />}> </Route>
-          <Route exact path="home" element={<Home />}> </Route>
-          <Route exact path="login" element={<Login />}> </Route>
-          <Route exact path="register" element={<Register />}> </Route>
-          <Route exact path="dashboard" element={<Dashboard />}> </Route>
-          <Route exact path="manageAllOrders" element={<ManageAllOrders />}> </Route>
-          <Route exact path="addProducts" element={<AddProducts />}> </Route>
-          <Route exact path="manageAllProducts" element={<ManageAllProducts />}> </Route>
-          <Route exact path="makeAdmin" element={<MakeAdmin />}> </Route>
-
-          <Route path="*" element={<NotFound />}> </Route>
+    <div className='App'>
 
 
-        </Routes>
+      <AuthProvider>
+        <BrowserRouter>
+          <Navigation />
+          <Routes>
 
-      </BrowserRouter>
+            <Route exact path="/" element={<Home />}> </Route>
+            <Route exact path="home" element={<Home />}> </Route>
+            <Route exact path="login" element={<Login />}> </Route>
+            <Route exact path="register" element={<Register />}> </Route>
+            <Route exact path="dashboard" element={<Dashboard />}> </Route>
+            <Route exact path="manageAllOrders" element={<ManageAllOrders />}> </Route>
+            <Route exact path="addProducts" element={<AddProducts />}> </Route>
+            <Route exact path="manageAllProducts" element={<ManageAllProducts />}> </Route>
+            <Route exact path="makeAdmin" element={<MakeAdmin />}> </Route>
 
-    </AuthProvider>
+            <Route path="*" element={<NotFound />}> </Route>
+
+
+          </Routes>
+
+        </BrowserRouter>
+
+      </AuthProvider>
+    </div>
   );
 }
 

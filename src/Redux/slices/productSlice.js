@@ -39,7 +39,11 @@ export const productSlice = createSlice({
       state.gift = action.payload
       state.female = action.payload
       state.male = action.payload
+      
       state.baby = action.payload
+      state.mobile = action.payload
+      state.ComputerAndAccesories = action.payload
+      state.toysAndSport = action.payload
       state.status = 'success'
     })
 

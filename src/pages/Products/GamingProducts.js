@@ -20,7 +20,7 @@ const GamingProducts = () => {
         <div className="bg-white top-0">
             <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div className='flex justify-between'>
-                    <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Gaming accessories</h2>
+                    <h2 className="text-2xl font-bold tracking-tight text-gray-900">Gaming accessories</h2>
 
                     <div className='text-blue-700'>
                         <button className='bg-transparent mr-2 mb-4'>See more</button>

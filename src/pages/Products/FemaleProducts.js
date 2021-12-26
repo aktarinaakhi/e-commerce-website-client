@@ -9,8 +9,8 @@ const FemaleProducts = () => {
     const femaleProducts = femaleState.filter(femaleProduct => femaleProduct.category === 'women')
 
     return (
-        <div className="bg-white my-16">
-            <div className="max-w-2xl mx-auto py-16 px-4 lg:py-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="bg-#eaeded my-16">
+            <div className="max-w-2xl mx-auto py-0 px-4 lg:py-1 sm:py-9 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div className='flex justify-between'>
                     <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Female fashion</h2>
 
