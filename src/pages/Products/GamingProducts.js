@@ -7,8 +7,14 @@ import { fetchProducts } from '../../Redux/slices/productSlice';
 import Modal from './Modal';
 
 const GamingProducts = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [show, setShow] = useState(false);
 
+    const showModal = () => {
+        setShow(true);
+    }
+    const hideModal = () => {
+        setShow(false);
+    }
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchProducts());
@@ -20,7 +26,6 @@ const GamingProducts = () => {
 
     return (
         <>
-            {showModal && <Modal></Modal>}
 
             <div className="bg-white top-0">
                 <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -54,14 +59,26 @@ const GamingProducts = () => {
                                     </div>
                                 </div>
                                 <Link to={`/addToCart/${product._id}`}>
-                                    <button onClick={() => showModal(true)} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Add to cart</button>
+                                    <button onClick={showModal} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Add to cart</button>
                                 </Link>
 
+
+
+                                {/* <Modal show={show} handleClose={hideModal} key={product._id}>
+                                    <p>Modal</p>
+                                </Modal> */}
+
                             </div>
+
                         ))}
                     </div>
+
                 </div>
             </div>
+
+
+
+
         </>
 
     );

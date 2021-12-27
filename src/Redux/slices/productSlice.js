@@ -22,6 +22,7 @@ export const productSlice = createSlice({
     female: [],
     baby: [],
     mobile: [],
+    singleProduct: {},
     ComputerAndAccesories: [],
     toysAndSport: [],
     status: 'idle'
@@ -29,8 +30,9 @@ export const productSlice = createSlice({
 
   reducers: {
 
-    singleProduct: (state, { payload }) => {
-      state.singleProduct = state.allProducts.find(product => product._id === payload._id)
+
+    aSingleProduct: (state, { payload }) => {
+      state.singleProduct = state.singleProduct.find(product => product._id === payload._id)
     },
   },
   extraReducers: (builder) => {
@@ -46,7 +48,7 @@ export const productSlice = createSlice({
 
 });
 
-export const { gamingProducts, giftProducts, gaming, home } = productSlice.actions;
+export const { aSingleProduct } = productSlice.actions;
 
 export default productSlice.reducer;
 
