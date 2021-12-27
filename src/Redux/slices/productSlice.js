@@ -14,6 +14,7 @@ export const fetchProducts = createAsyncThunk(
 export const productSlice = createSlice({
   name: 'products',
   initialState: {
+    allProducts: [],
     gaming: [],
     gift: [],
     home: [],
@@ -28,22 +29,13 @@ export const productSlice = createSlice({
 
   reducers: {
 
-    giftProducts: (state, { payload }) => {
-      state.readingList = state.readingList.filter(book => book.id !== payload.id);
+    singleProduct: (state, { payload }) => {
+      state.singleProduct = state.allProducts.find(product => product._id === payload._id)
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      state.gaming = action.payload
-      state.home = action.payload
-      state.gift = action.payload
-      state.female = action.payload
-      state.male = action.payload
-      
-      state.baby = action.payload
-      state.mobile = action.payload
-      state.ComputerAndAccesories = action.payload
-      state.toysAndSport = action.payload
+      state.allProducts = action.payload
       state.status = 'success'
     })
 

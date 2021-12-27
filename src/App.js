@@ -11,6 +11,7 @@ import AddProducts from './pages/Dashboard/Admin/AddProducts';
 import ManageAllOrders from './pages/Dashboard/Admin/ManageAllOrders';
 import ManageAllProducts from './pages/Dashboard/Admin/ManageAllProducts';
 import MakeAdmin from './pages/Dashboard/Admin/MakeAdmin';
+import Modal from './pages/Products/Modal';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
             <Route exact path="addProducts" element={<AddProducts />}> </Route>
             <Route exact path="manageAllProducts" element={<ManageAllProducts />}> </Route>
             <Route exact path="makeAdmin" element={<MakeAdmin />}> </Route>
-
+            <Route exact path="/addToCart/:productId" element={<Modal />}> </Route>
             <Route path="*" element={<NotFound />}> </Route>
 
 

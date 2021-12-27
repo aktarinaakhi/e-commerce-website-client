@@ -5,6 +5,7 @@ import GamingProducts from '../Products/GamingProducts'
 import GiftProducts from '../Products/GiftProducts';
 import HomeAndKitchenProducts from '../Products/HomeAndKitchenProducts';
 import MaleFashion from '../Products/MaleFashion';
+import Modal from '../Products/Modal';
 
 
 const Products = () => {

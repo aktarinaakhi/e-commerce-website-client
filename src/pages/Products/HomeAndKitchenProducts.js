@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const HomeAndKitchenProducts = () => {
 
-    const homeState = useSelector(state => state.products.home);
+    const homeState = useSelector(state => state.products.allProducts);
 
     const homeProducts = homeState.filter(homeProduct => homeProduct.category === 'Home and kitchen')
 

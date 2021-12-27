@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const FemaleProducts = () => {
 
-    const femaleState = useSelector(state => state.products.female);
+    const femaleState = useSelector(state => state.products.allProducts);
     const femaleProducts = femaleState.filter(femaleProduct => femaleProduct.category === 'women')
 
     return (

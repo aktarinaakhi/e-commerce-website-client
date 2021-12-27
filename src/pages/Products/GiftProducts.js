@@ -11,7 +11,7 @@ import "swiper/css/pagination"
 const GiftProducts = () => {
     SwiperCore.use([EffectCoverflow, Pagination]);
 
-    const giftState = useSelector(state => state.products.gift);
+    const giftState = useSelector(state => state.products.allProducts);
 
     const giftProducts = giftState.filter(homeProduct => homeProduct.category === 'gift')
 

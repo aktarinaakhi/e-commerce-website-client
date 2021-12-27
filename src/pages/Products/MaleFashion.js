@@ -4,7 +4,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const MaleFashion = () => {
-    const maleState = useSelector(state => state.products.male);
+    const maleState = useSelector(state => state.products.allProducts);
     const maleProducts = maleState.filter(maleProduct => maleProduct.category === 'male')
 
     return (
