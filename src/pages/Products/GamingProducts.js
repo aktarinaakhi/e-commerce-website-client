@@ -1,4 +1,4 @@
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { fetchProducts } from '../../Redux/slices/productSlice';
 import Modal from './Modal';
 
-const GamingProducts = () => {
+const GamingProducts = ({ handleAddToCart }) => {
     const [show, setShow] = useState(false);
 
     const showModal = () => {
@@ -59,7 +59,11 @@ const GamingProducts = () => {
                                     </div>
                                 </div>
                                 <Link to={`/addToCart/${product._id}`}>
-                                    <button onClick={showModal} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Add to cart</button>
+                                    <button
+                                        onClick={() => handleAddToCart(product)}
+                                        className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                                        <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+                                        Add to cart</button>
                                 </Link>
 
 
