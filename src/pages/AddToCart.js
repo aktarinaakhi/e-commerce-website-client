@@ -1,12 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import Cart from './Cart';
 
-const AddToCart = () => {
+const AddToCart = ({ cart }) => {
     const { productId } = useParams();
 
     const allProductState = useSelector(state => state.products.allProducts);
     const singleProduct = allProductState.find(product => product._id === productId)
+
 
     return (
         <div className=' mx-auto px-4 lg:pb-1 sm:py-24 sm:px-6  lg:px-16'>
@@ -31,20 +33,14 @@ const AddToCart = () => {
                 </div>
 
                 <div className='mx-4'>
-                    <h2 className='text-2xl'>Order summery</h2>
-
-                    <div>
-                        <p className="my-3 text-orange-600">BDT <span className="text-2xl ">{singleProduct?.price}</span></p>
-                        <div className='my-5'>
-                            <button class="bg-yellow-400 hover:bg-yellow-600 font-semibold py-2 px-20 rounded-full">
-                                Review order
-                            </button>
-                        </div>
-                        <button class="bg-orange-500 hover:bg-orange-700 font-semibold py-2 px-20 rounded-full">
-                            Add to cart
+                    <Cart
+                        singleProduct={singleProduct}
+                        key={singleProduct?._id}
+                    >
+                        <button class="bg-yellow-400 hover:bg-yellow-600 font-semibold py-2 px-20 rounded-full">
+                            Review order
                         </button>
-
-                    </div>
+                    </Cart>
 
                 </div>
             </div>

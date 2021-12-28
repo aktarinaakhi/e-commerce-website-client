@@ -6,7 +6,7 @@ export const fetchProducts = createAsyncThunk(
   async () => {
     const response = await fetch('http://localhost:5000/products')
       .then(res => res.json())
-    console.log(response);
+    // console.log(response);
     return response;
   }
 )
@@ -25,6 +25,7 @@ export const productSlice = createSlice({
     singleProduct: {},
     ComputerAndAccesories: [],
     toysAndSport: [],
+    cart: [],
     status: 'idle'
   },
 

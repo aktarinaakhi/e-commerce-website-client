@@ -32,7 +32,7 @@ const Products = () => {
     return (
         <>
             <CombineFourProducts></CombineFourProducts>
-            <GamingProducts handleAddToCart={handleAddToCart}></GamingProducts>
+            <GamingProducts handleAddToCart={handleAddToCart} cart={cart}></GamingProducts>
             <HomeAndKitchenProducts></HomeAndKitchenProducts>
             <GiftProducts></GiftProducts>
             <FemaleProducts></FemaleProducts>
