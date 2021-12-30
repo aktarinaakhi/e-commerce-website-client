@@ -31,12 +31,12 @@ const Products = () => {
     }
     return (
         <>
-            <CombineFourProducts></CombineFourProducts>
+            <CombineFourProducts handleAddToCart={handleAddToCart}></CombineFourProducts>
             <GamingProducts handleAddToCart={handleAddToCart} cart={cart}></GamingProducts>
-            <HomeAndKitchenProducts></HomeAndKitchenProducts>
-            <GiftProducts></GiftProducts>
-            <FemaleProducts></FemaleProducts>
-            <MaleFashion></MaleFashion>
+            <HomeAndKitchenProducts handleAddToCart={handleAddToCart} ></HomeAndKitchenProducts>
+            <GiftProducts handleAddToCart={handleAddToCart}></GiftProducts>
+            <FemaleProducts handleAddToCart={handleAddToCart}></FemaleProducts>
+            <MaleFashion handleAddToCart={handleAddToCart}></MaleFashion>
 
         </>
     );

@@ -7,14 +7,14 @@ import { fetchProducts } from '../../Redux/slices/productSlice';
 import Modal from './Modal';
 
 const GamingProducts = ({ handleAddToCart }) => {
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
 
-    const showModal = () => {
-        setShow(true);
-    }
-    const hideModal = () => {
-        setShow(false);
-    }
+    // const showModal = () => {
+    //     setShow(true);
+    // }
+    // const hideModal = () => {
+    //     setShow(false);
+    // }
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchProducts());
@@ -28,7 +28,7 @@ const GamingProducts = ({ handleAddToCart }) => {
         <>
 
             <div className="bg-white top-0">
-                <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
                     <div className='flex justify-between'>
                         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Gaming accessories</h2>
 
@@ -40,7 +40,7 @@ const GamingProducts = ({ handleAddToCart }) => {
                     </div>
                     <hr />
 
-                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-4">
+                    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-1">
                         {gamingState.slice(0, 5).map((product) => (
                             <div key={product._id} className="group relative hover:shadow-lg px-3 lg:h-4/5">
                                 <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-1/2 lg:aspect-none">
@@ -53,7 +53,7 @@ const GamingProducts = ({ handleAddToCart }) => {
                                 <div className="mt-4 flex justify-between">
                                     <div>
                                         <h3 className="text-sm text-gray-900"> {product.name}  </h3>
-                                        <p className="mt-1 text-sm text-gray-500">{product.descriptoin}</p>
+                                        <p className="mt-1 text-sm text-gray-500">{product.descriptoin.slice(0, 90)}</p>
                                         <p className="text-sm font-medium text-orange-500 mt-2">$ {product.price}</p>
 
                                     </div>
@@ -61,28 +61,17 @@ const GamingProducts = ({ handleAddToCart }) => {
                                 <Link to={`/addToCart/${product._id}`}>
                                     <button
                                         onClick={() => handleAddToCart(product)}
-                                        className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                                        <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+                                        className="bg-yellow-500 hover:bg-yellow-600  px-4 rounded shadow my-2 w-full">
+                                        <FontAwesomeIcon className='mr-2' icon={faShoppingCart}></FontAwesomeIcon>
                                         Add to cart</button>
                                 </Link>
 
-
-
-                                {/* <Modal show={show} handleClose={hideModal} key={product._id}>
-                                    <p>Modal</p>
-                                </Modal> */}
-
                             </div>
-
                         ))}
                     </div>
 
                 </div>
             </div>
-
-
-
-
         </>
 
     );
