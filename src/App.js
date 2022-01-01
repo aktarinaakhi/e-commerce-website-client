@@ -15,6 +15,7 @@ import AddToCart from './pages/AddToCart';
 import BabyProducts from './pages/Products/BabyProducts';
 import Mobiles from './pages/Products/Mobiles';
 import Computer from './pages/Products/Computer';
+import ToysAndSportProducts from './pages/Products/ToysAndSportProducts';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path="/baby" element={<BabyProducts />}> </Route>
             <Route path="/mobile" element={<Mobiles />}> </Route>
             <Route path="/computer" element={<Computer />}> </Route>
+            <Route path="/toysAndSport" element={<ToysAndSportProducts />}> </Route>
             <Route path="*" element={<NotFound />}> </Route>
 
 
