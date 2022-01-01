@@ -1,12 +1,10 @@
-
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const BabyProducts = () => {
+const Mobiles = () => {
     const allProduct = useSelector(state => state.products.allProducts);
-    const babyProducts = allProduct.filter(baby => baby.category === 'baby');
-
+    const mobiles = allProduct.filter(baby => baby.category === 'mobile');
     return (
         <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
             <div className='mb-2'>
@@ -15,7 +13,7 @@ const BabyProducts = () => {
             <hr className='w-16 text-black text-2xl' />
 
             <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-4">
-                {babyProducts.slice(0, 5).map((product) => (
+                {mobiles.slice(0, 5).map((product) => (
                     <Link to={`/addToCart/${product._id}`}>
                         <div key={product._id} className="group relative hover:shadow-lg px-3 lg:h-4/5">
                             <div className="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-1/2 lg:aspect-none">
@@ -38,8 +36,7 @@ const BabyProducts = () => {
                 ))}
             </div>
         </div>
-
     );
 };
 
-export default BabyProducts;
+export default Mobiles;

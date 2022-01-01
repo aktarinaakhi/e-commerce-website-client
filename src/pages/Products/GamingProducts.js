@@ -27,7 +27,7 @@ const GamingProducts = ({ handleAddToCart }) => {
     return (
         <>
 
-            <div className="">
+            <div>
                 <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
                     <div className='flex justify-between'>
                         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Gaming accessories</h2>
@@ -61,7 +61,7 @@ const GamingProducts = ({ handleAddToCart }) => {
                                 <Link to={`/addToCart/${product._id}`}>
                                     <button
                                         onClick={() => handleAddToCart(product)}
-                                        className="bg-yellow-500 hover:bg-yellow-600  px-4 rounded shadow my-2 w-full">
+                                        className="bg-yellow-500 hover:bg-yellow-600  px-4 rounded shadow my-2 object-center">
                                         <FontAwesomeIcon className='mr-2' icon={faShoppingCart}></FontAwesomeIcon>
                                         Add to cart</button>
                                 </Link>

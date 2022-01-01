@@ -44,7 +44,7 @@ const FemaleProducts = ({ handleAddToCart }) => {
                             <Link to={`/addToCart/${product._id}`}>
                                 <button
                                     onClick={() => handleAddToCart(product)}
-                                    className="bg-yellow-500 hover:bg-yellow-600 px-4 rounded shadow my-4 w-full">
+                                    className="bg-yellow-500 hover:bg-yellow-600 px-4 rounded shadow my-4">
                                     <FontAwesomeIcon className='mr-2' icon={faShoppingCart}></FontAwesomeIcon>
                                     Add to cart</button>
                             </Link>

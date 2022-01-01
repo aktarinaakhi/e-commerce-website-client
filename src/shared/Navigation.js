@@ -22,7 +22,7 @@ const Navigation = () => {
 
                     <Link to="home">
                         <span className="block mt-4 lg:inline-block lg:mt-0 text-white border border-transparent px-2 rounded-sm hover:border-white hover:text-orange-600 mr-4">
-                            Home
+                            Shop
                         </span>
                     </Link>
                     {/* <Link to="home">
