@@ -11,6 +11,7 @@ const HomeAndKitchenProducts = ({ handleAddToCart }) => {
     const homeProducts = homeState.filter(homeProduct => homeProduct.category === 'Home and kitchen')
 
     return (
+
         <div className="bg-white">
             <div className="max-w-2xl mx-auto  pt-12 px-4 lg:py-0 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
                 <div className='flex justify-between'>

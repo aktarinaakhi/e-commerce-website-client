@@ -10,7 +10,7 @@ const FemaleProducts = ({ handleAddToCart }) => {
     const femaleProducts = femaleState.filter(femaleProduct => femaleProduct.category === 'women')
 
     return (
-        <div className="bg-#eaeded my-16">
+        <div className="bg-#eaeded mt-10">
             <div className="max-w-2xl mx-auto pt-12 px-4 lg:py-0 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
                 <div className='flex justify-between'>
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">Female fashion</h2>

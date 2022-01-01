@@ -37,7 +37,7 @@ const Products = () => {
             <GiftProducts handleAddToCart={handleAddToCart}></GiftProducts>
             <FemaleProducts handleAddToCart={handleAddToCart}></FemaleProducts>
             <MaleFashion handleAddToCart={handleAddToCart}></MaleFashion>
-
+            {/* <BabyProducts></BabyProducts> */}
         </>
     );
 };

@@ -9,8 +9,8 @@ const MaleFashion = ({ handleAddToCart }) => {
     const maleProducts = maleState.filter(maleProduct => maleProduct.category === 'male')
 
     return (
-        <div className="bg-white">
-            <div className="max-w-2xl mx-auto py-0 px-4 lg:py-1 sm:py-9 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="">
+            <div className="max-w-2xl mx-auto py-12 px-4 lg:py-1 sm:py-9 sm:px-6 lg:max-w-7xl lg:px-1">
                 <div className='flex justify-between'>
                     <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Male fashion</h2>
                     <div className='text-blue-700'>
@@ -20,10 +20,10 @@ const MaleFashion = ({ handleAddToCart }) => {
                 </div>
                 <hr />
 
-                <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-4">
+                <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-1">
                     {maleProducts.slice(0, 5).map((product) => (
                         <div key={product._id} className="group relative lg:h-4/5 hover:shadow-lg px-3">
-                            <div className="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-2/3 lg:aspect-none">
+                            <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-2/3 lg:aspect-none">
                                 <img
                                     src={product.image}
                                     alt={product.image}

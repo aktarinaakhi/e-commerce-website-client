@@ -27,7 +27,7 @@ const GamingProducts = ({ handleAddToCart }) => {
     return (
         <>
 
-            <div className="bg-white top-0">
+            <div className="">
                 <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
                     <div className='flex justify-between'>
                         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Gaming accessories</h2>
