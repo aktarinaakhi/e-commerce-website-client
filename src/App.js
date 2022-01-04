@@ -16,6 +16,9 @@ import BabyProducts from './pages/Products/BabyProducts';
 import Mobiles from './pages/Products/Mobiles';
 import Computer from './pages/Products/Computer';
 import ToysAndSportProducts from './pages/Products/ToysAndSportProducts';
+import AllGamingProducts from './pages/Products/AllGamingProducts';
+import OrderNow from './pages/OrderNow';
+import PrivateRoute from './protectedRoutes/PrivateRoute';
 
 
 function App() {
@@ -43,6 +46,8 @@ function App() {
             <Route path="/mobile" element={<Mobiles />}> </Route>
             <Route path="/computer" element={<Computer />}> </Route>
             <Route path="/toysAndSport" element={<ToysAndSportProducts />}> </Route>
+            <Route path="/allGamingProducts" element={<AllGamingProducts />}> </Route>
+            <Route path="/orderNow" element={<PrivateRoute> <OrderNow /> </PrivateRoute>}> </Route>
             <Route path="*" element={<NotFound />}> </Route>
 
 
@@ -55,4 +60,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;  

@@ -1,10 +1,9 @@
 import { faChevronRight, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import { fetchProducts } from '../../Redux/slices/productSlice';
-import Modal from './Modal';
 
 const GamingProducts = ({ handleAddToCart }) => {
     // const [show, setShow] = useState(false);
@@ -33,7 +32,10 @@ const GamingProducts = ({ handleAddToCart }) => {
                         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Gaming accessories</h2>
 
                         <div className='text-blue-700'>
-                            <button className='bg-transparent mr-2 mb-4'>See more</button>
+                            <Link to="/allGamingProducts">
+                                <button className='bg-transparent mr-2 mb-4'>See more</button>
+
+                            </Link>
                             <FontAwesomeIcon icon={faChevronRight} />
                         </div>
 

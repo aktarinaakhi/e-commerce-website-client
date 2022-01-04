@@ -10,7 +10,7 @@ const Computer = () => {
             <div className='mb-2'>
                 <h2 className="text-2xl font-bold tracking-tight text-gray-900">Computer & accesories</h2>
             </div>
-            <hr className='w-16 text-black text-2xl' />
+            <hr className='w-16' />
 
             <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-4">
                 {computersProducts.slice(0, 5).map((product) => (
@@ -26,7 +26,7 @@ const Computer = () => {
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-sm text-gray-900"> {product.name}  </h3>
-                                    <p className="mt-1 text-sm text-gray-500">{product.descriptoin.slice(0, 90)}</p>
+                                    <p className="mt-1 text-sm text-gray-500">{product.descriptoin}</p>
                                     <p className="text-sm font-medium text-orange-500 mt-2">BDT {product.price}</p>
 
                                 </div>

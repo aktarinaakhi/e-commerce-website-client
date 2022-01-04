@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Cart = ({ singleProduct, children }) => {
@@ -36,9 +37,12 @@ const Cart = ({ singleProduct, children }) => {
                     {children}
 
                 </div>
-                <button class="bg-orange-500 hover:bg-orange-700 font-semibold py-2 px-20 rounded-full text-center">
-                    Order now
-                </button>
+                <Link to="/orderNow">
+                    <button class="bg-orange-500 hover:bg-orange-700 font-semibold py-2 px-20 rounded-full text-center">
+                        Order now
+                    </button>
+                </Link>
+
 
             </div>
         </div>

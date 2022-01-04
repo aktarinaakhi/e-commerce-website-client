@@ -8,7 +8,7 @@ const Mobiles = () => {
     return (
         <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
             <div className='mb-2'>
-                <h2 className="text-2xl font-bold tracking-tight text-gray-900">Baby Products</h2>
+                <h2 className="text-2xl font-bold tracking-tight text-gray-900">Mobile</h2>
             </div>
             <hr className='w-16 text-black text-2xl' />
 
