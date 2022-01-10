@@ -1,5 +1,4 @@
-import { faChevronRight, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';

@@ -7,7 +7,7 @@ export const cartSlice = createSlice({
     },
     reducers: {
         addItemsToCart: (id, quantity) => async (dispatch, getState) => {
-            const { data } = await axios.get(`http://localhost:5000/products/${id}`);
+            const { data } = await axios.get(`https://nameless-sands-15890.herokuapp.com/products/${id}`);
 
             // dispatch({
             //     type: ADD_TO_CART,
