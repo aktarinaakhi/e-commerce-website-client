@@ -19,6 +19,7 @@ import ToysAndSportProducts from './pages/Products/ToysAndSportProducts';
 import AllGamingProducts from './pages/Products/AllGamingProducts';
 import OrderNow from './pages/OrderNow';
 import PrivateRoute from './protectedRoutes/PrivateRoute';
+import AllHomeAndKitchenProducts from './pages/Products/AllHomeAndKitchenProducts';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
             <Route path="/computer" element={<Computer />}> </Route>
             <Route path="/toysAndSport" element={<ToysAndSportProducts />}> </Route>
             <Route path="/allGamingProducts" element={<AllGamingProducts />}> </Route>
+            <Route path="/allHomeAndKitchenProducts" element={<AllHomeAndKitchenProducts />}> </Route>
             <Route path="/orderNow" element={<PrivateRoute> <OrderNow /> </PrivateRoute>}> </Route>
             <Route path="*" element={<NotFound />}> </Route>
 

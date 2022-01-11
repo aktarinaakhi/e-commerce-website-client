@@ -17,8 +17,12 @@ const HomeAndKitchenProducts = ({ handleAddToCart }) => {
                 <div className='flex justify-between'>
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">Home and Kitchen</h2>
 
+
                     <div className='text-blue-700'>
-                        <button className='bg-transparent mr-2 mb-4'>See more</button>
+                        <Link to="/allHomeAndKitchenProducts">
+                            <button className='bg-transparent mr-2 mb-4'>See more</button>
+
+                        </Link>
                         <FontAwesomeIcon icon={faChevronRight} />
                     </div>
 
