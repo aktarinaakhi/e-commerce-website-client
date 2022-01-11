@@ -54,8 +54,8 @@ function App() {
             <Route path="/allHomeAndKitchenProducts" element={<AllHomeAndKitchenProducts />}> </Route>
             <Route path="/allFemaleProducts" element={<AllFemaleProducts />}> </Route>
             <Route path="/allMaleProducts" element={<AllMaleProducts />}> </Route>
-            <Route path="/myOrders" element={<MyOrders />}> </Route>
-            <Route path="/orderNow" element={<PrivateRoute> <OrderNow /> </PrivateRoute>}> </Route>
+            {/* <Route path="/myOrders" element={<MyOrders />}> </Route> */}
+            <Route path="/orderNow/:productId" element={<PrivateRoute> <OrderNow /> </PrivateRoute>}> </Route>
             <Route path="*" element={<NotFound />}> </Route>
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Cart from './Cart';
 
 const AddToCart = ({ cart }) => {
@@ -32,6 +32,12 @@ const AddToCart = ({ cart }) => {
                         singleProduct={singleProduct}
                         key={singleProduct?._id}
                     >
+                        {/* {children} */}
+                        <Link to={`/orderNow/${singleProduct._id}`}>
+                            <button class="bg-orange-500 hover:bg-orange-700 font-semibold py-2 px-20 rounded-full text-center">
+                                Order now
+                            </button>
+                        </Link>
 
                     </Cart>
 
