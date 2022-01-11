@@ -1,8 +1,6 @@
 import React from 'react';
 
-
 const Cart = ({ singleProduct, children }) => {
-
 
     let total = 0;
     let shipping = 0;
@@ -15,8 +13,6 @@ const Cart = ({ singleProduct, children }) => {
     totalBeforeTax = Number(total + shipping)
     estimitedTax = Number(totalBeforeTax * 0.1);
     taxTotal = Number(estimitedTax + totalBeforeTax);
-
-
 
     return (
         <div>
@@ -36,12 +32,6 @@ const Cart = ({ singleProduct, children }) => {
                     {children}
 
                 </div>
-                {/* <Link to="/orderNow/:productId">
-                    <button class="bg-orange-500 hover:bg-orange-700 font-semibold py-2 px-20 rounded-full text-center">
-                        Order now
-                    </button>
-                </Link> */}
-
 
             </div>
         </div>

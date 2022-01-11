@@ -41,14 +41,15 @@ const OrderNow = () => {
             <div className='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-10'>
                 <div className='col-span-2'>
                     <form className="order-form" onSubmit={handleSubmit(onSubmit)}>
-                        <div className='grid grid-cols-2 gap-4'>
+                        <div className='grid grid-cols-2 gap-5'>
                             <div>
-                                <input className='w-full my-6 border p-1' defaultValue={user.displayName} {...register("name")} /> <br />
-                                <input className='w-full my-2 border p-1' placeholder="email" defaultValue={user.email} {...register("email", { required: true })} /> <br />
-                            </div>
-                            <div className=''>
+                                <input className='w-full my-6 border p-1' defaultValue={user?.displayName} {...register("name", { required: true })} />
+                                {errors.name && <span>Address is required </span>}
 
-                                <select className='w-full my-6 border p-1' {...register("region")}>
+                                <input className='w-full my-2 border p-1' placeholder="email" defaultValue={user?.email} {...register("email", { required: true })} />
+                                {errors.email && <span>Address is required </span>}
+
+                                <select className='w-full my-6 border p-1' {...register("region", { required: true })}>
                                     <option value="female">Dhaka</option>
                                     <option value="male">Rajshahi</option>
                                     <option value="other">Barishal</option>
@@ -60,18 +61,35 @@ const OrderNow = () => {
                                 </select>
                                 {errors.region && <span>Address is required </span>}
 
-                                <input className='w-full my-2 border p-1' placeholder="Address" defaultValue="" {...register("Address", { required: true })} /> <br />
+                            </div>
+
+                            <div>
+                                <input className='w-full my-6 border p-1' defaultValue={singleProduct?.name} {...register("ProductName", { required: true })} />
+                                {errors.ProductName && <span>Address is required </span>}
+
+                                <input className='w-full my-6 border p-1' defaultValue={singleProduct?.image} {...register("ProductImage", { required: true })} />
+                                {errors.ProductImage && <span>Address is required </span>}
+
+                                <input className='w-full my-6 border p-1' defaultValue={singleProduct?.descriptoin} {...register("ProductDiscription", { required: true })} />
+                                {errors.ProductDiscription && <span>Address is required </span>}
+
+
+
+                                <input className='w-full my-6 border p-1' defaultValue={singleProduct?.price} {...register("ProductPrice", { required: true })} />
+                                {errors.ProductPrice && <span>Address is required </span>}
+
+                                <input className='w-full my-2 border p-1' placeholder="Address" defaultValue="" {...register("Address", { required: true })} />
                                 {errors.Address && <span>Address is required </span>}
 
-                                <input className='w-full my-6 border p-1' placeholder="phone number" defaultValue="" {...register("Phone", { required: true })} required /> <br />
+                                <input className='w-full my-6 border p-1' placeholder="phone number" defaultValue="" {...register("Phone", { required: true })} required />
+
                                 <input className='p-2 border bg-orange-500 rounded' value="Confirm Order" type="submit"></input>
 
                             </div>
 
                         </div>
-
-
                     </form>
+
                 </div>
 
                 <div>

@@ -115,7 +115,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     };
 
-
+    console.log(user);
     return (
         {
             user,
