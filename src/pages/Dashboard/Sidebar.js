@@ -17,7 +17,6 @@ const Sidebar = () => {
 
                         <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/pay">Pay</NavLink>
 
-                        <button className="hover:border-gray-500 border-transparent border rounded-sm p-3" onClick={() => logOut()}>Logout</button>
 
                     </div>}
 
