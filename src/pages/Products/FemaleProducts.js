@@ -15,8 +15,12 @@ const FemaleProducts = ({ handleAddToCart }) => {
                 <div className='flex justify-between'>
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">Female fashion</h2>
 
+
                     <div className='text-blue-700'>
-                        <button className='bg-transparent mr-2 mb-4'>Shop more</button>
+                        <Link to="/allFemaleProducts">
+                            <button className='bg-transparent mr-2 mb-4'>See more</button>
+
+                        </Link>
                         <FontAwesomeIcon icon={faChevronRight} />
                     </div>
                 </div>

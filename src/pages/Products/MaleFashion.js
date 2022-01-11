@@ -12,9 +12,13 @@ const MaleFashion = ({ handleAddToCart }) => {
         <div className="">
             <div className="max-w-2xl mx-auto py-12 px-4 lg:py-1 sm:py-9 sm:px-6 lg:max-w-7xl lg:px-1">
                 <div className='flex justify-between'>
-                    <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Male fashion</h2>
+                    <h2 className="text-2xl font-bold tracking-tight text-gray-900">Male fashion</h2>
+
                     <div className='text-blue-700'>
-                        <button className='bg-transparent mr-2 mb-4'>See more</button>
+                        <Link to="/allMaleProducts">
+                            <button className='bg-transparent mr-2 mb-4'>See more</button>
+
+                        </Link>
                         <FontAwesomeIcon icon={faChevronRight} />
                     </div>
                 </div>
