@@ -24,6 +24,7 @@ import AllFemaleProducts from './pages/Products/AllFemaleProducts';
 import AllMaleProducts from './pages/Products/AllMaleProducts';
 import MyOrders from './pages/Dashboard/User/MyOrders';
 import GiveReview from './pages/Dashboard/User/GiveReview';
+import Footer from './shared/Footer';
 
 
 function App() {
@@ -59,10 +60,9 @@ function App() {
             <Route path="/giveReview" element={<GiveReview />}> </Route>
             <Route path="/orderNow/:productId" element={<PrivateRoute> <OrderNow /> </PrivateRoute>}> </Route>
             <Route path="*" element={<NotFound />}> </Route>
-
-
           </Routes>
 
+          <Footer></Footer>
         </BrowserRouter>
 
       </AuthProvider>
