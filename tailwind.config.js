@@ -1,3 +1,4 @@
+
 module.exports = {
   content: [
     './public/**/*.html',
@@ -22,6 +23,7 @@ module.exports = {
         // => @media (min-width: 1536px) { ... }
       },
       display: ["group-hover"]
+
     },
   },
   plugins: [],

@@ -13,7 +13,7 @@ const Sidebar = () => {
                     {!admin && <div className='flex flex-col text-center'>
                         <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/myOrders">My Orders</NavLink>
 
-                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/review">Add Review</NavLink>
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/giveReview">Add Review</NavLink>
 
                         <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/pay">Pay</NavLink>
 
