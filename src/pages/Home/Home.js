@@ -5,9 +5,10 @@ import Products from './Products';
 
 const Home = () => {
     return (
-        <div className='md:container md:mx-auto'>
-
-            <Banner></Banner>
+        <div className='md:container md:mx-auto' >
+            <div id='home'>
+                <Banner></Banner>
+            </div>
             <Products></Products>
             <Reviews></Reviews>
 

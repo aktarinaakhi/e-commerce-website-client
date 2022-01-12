@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import payment_image from '../images/contact.18588cb5.png'
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
     return (
@@ -9,26 +10,32 @@ const Footer = () => {
             <div className='py-6'>
                 <p>See personalized recommendations</p>
                 <div className='my-2'>
-                    <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-10 border border-blue-700 rounded'>Sign in</button>
+                    <Link to="/login">
+                        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-10 border border-blue-700 rounded'>Sign in</button>
+                    </Link>
+
                 </div>
                 <span>
-                    <small>New cusstomer?</small>
-                    <Link to="register">Start here</Link>
+                    <span>New cusstomer?</span>
+                    <span className='text-blue-900'>
+                        <Link to="register">Start here</Link>
+
+                    </span>
 
                 </span>
             </div>
             <hr className='mx-10' />
 
             <div className='mt-8'>
-                <Link to="/">
-                    <button className='bg-slate-600 hover:bg-slate-600 text-white font-semibold py-2 w-full'>Back to top</button>
-                </Link>
+                <HashLink to="/home#home">
+                    <button className='bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 w-full'>Back to top</button>
+                </HashLink>
             </div>
 
 
             {/* main footer */}
 
-            <div className='py-5 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-1  bg-slate-700  px-10'>
+            <div className='py-5 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-1  bg-slate-800 px-16'>
                 <div>
                     <img src={payment_image} alt="" />
                 </div>
