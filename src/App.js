@@ -24,6 +24,7 @@ import AllFemaleProducts from './pages/Products/AllFemaleProducts';
 import AllMaleProducts from './pages/Products/AllMaleProducts';
 import MyOrders from './pages/Dashboard/User/MyOrders';
 import GiveReview from './pages/Dashboard/User/GiveReview';
+import Payment from './pages/Dashboard/User/Payment';
 
 
 function App() {
@@ -55,9 +56,10 @@ function App() {
             <Route path="/allHomeAndKitchenProducts" element={<AllHomeAndKitchenProducts />}> </Route>
             <Route path="/allFemaleProducts" element={<AllFemaleProducts />}> </Route>
             <Route path="/allMaleProducts" element={<AllMaleProducts />}> </Route>
-            <Route path="/myOrders" element={<MyOrders />}> </Route>
-            <Route path="/giveReview" element={<GiveReview />}> </Route>
+            <Route path="/myOrders" element={<PrivateRoute><MyOrders /></PrivateRoute>}> </Route>
+            <Route path="/giveReview" element={<PrivateRoute><GiveReview /></PrivateRoute>}> </Route>
             <Route path="/orderNow/:productId" element={<PrivateRoute> <OrderNow /> </PrivateRoute>}> </Route>
+            <Route path="/payment" element={<PrivateRoute> <Payment /> </PrivateRoute>}> </Route>
             <Route path="*" element={<NotFound />}> </Route>
           </Routes>
 

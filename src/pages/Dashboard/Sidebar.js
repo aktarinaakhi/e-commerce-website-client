@@ -15,7 +15,7 @@ const Sidebar = () => {
 
                         <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/giveReview">Add Review</NavLink>
 
-                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/pay">Pay</NavLink>
+                        <NavLink className='hover:border-gray-500 border-transparent border rounded-sm p-3' as={Link} to="/payment">Pay</NavLink>
 
 
                     </div>}

@@ -6,7 +6,6 @@ export const fetchProducts = createAsyncThunk(
   async () => {
     const response = await fetch('https://nameless-sands-15890.herokuapp.com/products')
       .then(res => res.json())
-    // console.log(response);
     return response;
   }
 )
@@ -15,32 +14,16 @@ export const productSlice = createSlice({
   name: 'products',
   initialState: {
     allProducts: [],
-    gaming: [],
-    gift: [],
-    home: [],
-    male: [],
-    female: [],
-    baby: [],
-    mobile: [],
-    singleProduct: {},
-    ComputerAndAccesories: [],
-    toysAndSport: [],
-    cart: [],
     status: 'idle'
   },
 
-  reducers: {
-
-
-    aSingleProduct: (state, { payload }) => {
-      state.singleProduct = state.singleProduct.find(product => product._id === payload._id)
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchProducts.fulfilled, (state, action) => {
-      state.allProducts = action.payload
-      state.status = 'success'
-    })
+    builder
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        state.allProducts = action.payload
+        state.status = 'success'
+      })
 
     builder.addCase(fetchProducts.pending, (state, action) => {
       state.status = 'pending';
@@ -49,7 +32,7 @@ export const productSlice = createSlice({
 
 });
 
-export const { aSingleProduct } = productSlice.actions;
+export const { } = productSlice.actions;
 
 export default productSlice.reducer;
 

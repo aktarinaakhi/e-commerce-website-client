@@ -19,7 +19,7 @@ const Reviews = () => {
 
         <div className="mx-auto rounded-2xl bg-slate-100 h-96">
             <div className="review-title pt-2 text-center">
-                <h2 className='relative py-6 text-2xl'>What our client say..!</h2>
+                <h2 className='relative py-6 text-2xl bold'>What our client say..!</h2>
             </div>
             <div className=" mx-6">
 

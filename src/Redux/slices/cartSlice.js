@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import axios from 'axios';
 
 
 export const fetchOrders = createAsyncThunk(
@@ -7,7 +6,6 @@ export const fetchOrders = createAsyncThunk(
     async () => {
         const response = await fetch('https://nameless-sands-15890.herokuapp.com/orders')
             .then(res => res.json())
-        console.log(response);
         return response;
     }
 )
@@ -19,11 +17,11 @@ export const cartSlice = createSlice({
         allOrders: []
     },
     reducers: {
-        addItemsToCart: (id, quantity) => async (dispatch, getState) => {
-            const { data } = await axios.get(`https://nameless-sands-15890.herokuapp.com/products/${id}`);
+        // addItemsToCart: (id, quantity) => async (dispatch, getState) => {
+        //     const { data } = await axios.get(`https://nameless-sands-15890.herokuapp.com/products/${id}`);
 
-            localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
-        },
+        //     localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+        // },
     },
     extraReducers: (builder) => {
         builder.addCase(fetchOrders.fulfilled, (state, action) => {
@@ -36,6 +34,6 @@ export const cartSlice = createSlice({
         })
     },
 })
-export const { aSingleProduct } = cartSlice.actions;
+export const { } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -6,7 +6,6 @@ export const fetchReviews = createAsyncThunk(
     async () => {
         const response = await fetch('https://nameless-sands-15890.herokuapp.com/reviews')
             .then(res => res.json())
-        console.log(response);
         return response;
     }
 )

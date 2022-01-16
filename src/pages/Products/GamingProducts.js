@@ -14,13 +14,14 @@ const GamingProducts = ({ handleAddToCart }) => {
     // const hideModal = () => {
     //     setShow(false);
     // }
+    
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchProducts());
     }, [])
 
     const productState = useSelector(state => state.products.allProducts);
-    const gamingState = productState.filter(gaming => gaming.category === 'Gaming accessories')
+    const gamingState = productState.filter(gaming => gaming.category === 'Gaming accessories');
 
 
     return (
