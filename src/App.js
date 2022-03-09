@@ -30,7 +30,7 @@ import Payment from './pages/Dashboard/User/Payment';
 function App() {
   return (
 
-    <div className='App'>
+    <div>
 
 
       <AuthProvider>
