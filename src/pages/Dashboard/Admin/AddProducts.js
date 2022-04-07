@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import Dashboard from '../Dashboard';
 
 const AddProducts = () => {
-    const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const { register, reset, handleSubmit } = useForm();
 
     const onSubmit = data => {
         axios.post('https://nameless-sands-15890.herokuapp.com/products', data)
@@ -12,7 +12,6 @@ const AddProducts = () => {
                 if (res.data.insertedId && res.config.data) {
                     alert('product added Successfully');
                     reset();
-                    console.log(res);
                 }
             })
     }

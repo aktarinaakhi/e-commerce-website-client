@@ -116,6 +116,7 @@ const useFirebase = () => {
     };
 
     console.log(user);
+    // eeta pacche na manual regis
     return (
         {
             user,

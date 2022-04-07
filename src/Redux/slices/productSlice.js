@@ -7,6 +7,7 @@ export const fetchProducts = createAsyncThunk(
     const response = await fetch('https://nameless-sands-15890.herokuapp.com/products')
       .then(res => res.json())
     return response;
+
   }
 )
 
