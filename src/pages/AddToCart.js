@@ -34,7 +34,7 @@ const AddToCart = ({ cart }) => {
                     >
                         {/* {children} */}
                         <Link to={`/orderNow/${singleProduct._id}`}>
-                            <button class="bg-orange-500 hover:bg-orange-700 font-semibold py-2 px-20 rounded-full text-center">
+                            <button className="bg-orange-500 hover:bg-orange-700 font-semibold py-2 px-20 rounded-full text-center">
                                 Order now
                             </button>
                         </Link>
