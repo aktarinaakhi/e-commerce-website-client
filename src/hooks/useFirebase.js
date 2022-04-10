@@ -11,7 +11,6 @@ const useFirebase = () => {
     const [admin, setAdmin] = useState(false);
     // const [token, setToken] = useState('');
 
-
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
@@ -24,7 +23,7 @@ const useFirebase = () => {
                 saveUser(user.email, user.displayName, 'PUT');
                 setError('');
                 const destination = location?.state?.from || '/home';
-                history.push(destination);
+                // history.push(destination);
             })
             .catch((error) => {
                 setError(error.message);

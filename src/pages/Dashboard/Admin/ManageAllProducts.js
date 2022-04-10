@@ -4,10 +4,10 @@ import Dashboard from '../Dashboard';
 const ManageAllProducts = () => {
 
     const [products, setProducts] = useState([]);
-    const [spinner, setSpinner] = useState(true);
+    // const [spinner, setSpinner] = useState(true);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    // const handleShow = () => setShow(true);
 
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const ManageAllProducts = () => {
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
-                setSpinner(false)
+                // setSpinner(false)
             });
     }, []);
     const modalShow = (id) => {
@@ -41,9 +41,9 @@ const ManageAllProducts = () => {
             <div className='text-center my-4 shadow-lg mx-10'>
                 <h2 className='mt-5 text-center text-2xl mb-10'>Manage all products</h2>
 
-                {
+                {/* {
                     spinner && <h2 className="mx-auto" animation="border" variant="dark" />
-                }
+                } */}
                 {products.map(product => <div className="flex justify-start mt-10 shadow-lg">
                     <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white ">
                         <div>
@@ -60,33 +60,6 @@ const ManageAllProducts = () => {
                         <button onClick={() => modalShow(product._id)} className="text-white ml-20 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="defaultModal">
                             Delete products
                         </button>
-
-                        <div show={show} onHide={handleClose} id="small-modal" tabindex="-1" className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-                            <div className="relative p-4 w-full max-w-md h-full md:h-auto">
-                                <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-
-
-                                    {/* <!-- Modal body --> */}
-                                    <div className="p-6 space-y-6">
-                                        <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                            Are you sure to want to cancel this booking service ?
-                                        </p>
-                                        <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                            The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <button variant="secondary" onClick={handleClose}>
-                                            Cancel
-                                        </button>
-                                        <button variant="primary" onClick={() => handleDelete(product._id)}>
-                                            Confirm
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
