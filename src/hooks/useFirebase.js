@@ -54,9 +54,11 @@ const useFirebase = () => {
                 saveUser(email, name, 'POST');
                 updateProfile(auth.currentUser, {
                     displayName: name
-                }).then(() => {
-                }).catch((error) => {
-                });
+                })
+                    .then(() => {
+                    })
+                    .catch((error) => {
+                    });
                 history.replace('/');
             })
             .catch((error) => {
