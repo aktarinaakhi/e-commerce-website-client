@@ -18,14 +18,18 @@ const Banner = () => {
                 slidesPerView={1}
                 navigation
             >
-                <SwiperSlide >
-                    <img className='w-full h-96 object-cover' src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2hvcHBpbmclMjBvbmxpbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+
+                <SwiperSlide>
+                    <img className='w-full h-96 object-fill' src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?size=626&ext=jpg&ga=GA1.2.1411646726.1653912072" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96 object-cover' src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2hvcHBpbmclMjBvbmxpbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+                    <img className='w-full h-96 object-fill' src="https://img.freepik.com/free-photo/pretty-young-stylish-sexy-woman-pink-luxury-dress-summer-fashion-trend-chic-style-sunglasses-blue-studio-background-shopping-holding-paper-bags-talking-mobile-phone-shopaholic_285396-2957.jpg?size=626&ext=jpg&ga=GA1.2.1411646726.1653912072" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full h-96 object-fill' src="https://images.unsplash.com/photo-1576072446584-4955dfe17b86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2hvcHBpbmclMjBvbmxpbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+                    <div>
+                        <img className='w-full h-96 object-fill' src="https://img.freepik.com/free-vector/banner-black-friday-super-sale-realistic-3d-black-shopping-basket_548887-26.jpg?size=626&ext=jpg&ga=GA1.2.1411646726.1653912072" alt="" />
+                    </div>
+
                 </SwiperSlide>
 
 
