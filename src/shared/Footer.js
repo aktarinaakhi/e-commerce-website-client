@@ -56,7 +56,7 @@ const Footer = () => {
                     <p> Sitemap</p>
                 </div>
                 <div className='text-white text-left'>
-                    <h4 className="pb-3">Follow Us</h4>
+                    <h4 className="pb-3 text-xl bold">Follow Us</h4>
                     <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205,Bangladesh </p>
                     <p>Phone : 09613 787801, 09666 787801</p>
                     <p>E-mail : info@tourbooking.com</p>
