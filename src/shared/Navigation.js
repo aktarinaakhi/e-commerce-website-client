@@ -1,44 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from "../images/logo.png"
 import useAuth from '../hooks/useAuth';
 
 const Navigation = () => {
     const { logOut, user } = useAuth();
     return (
-        <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-3">
-            <div className="flex items-center flex-shrink-0 text-white mr-6">
-                <span className="font-semibold text-xl tracking-tight">E-ROYAL</span>
+        <nav className="flex items-center justify-between flex-wrap bg-gray-100 p-3">
+            <div className="flex items-center flex-shrink-0 text-black ml-44">
+                <Link to="home">
+                    <img className='w-full' src={logo} alt="" />
+                </Link>
             </div>
 
             <div className="block lg:hidden">
-                <button className="flex items-center px-3 py-2 border-2 rounded text-white border-blue-500 hover:text-orange-600 hover:border-white">
+                <button className="flex items-center px-3 py-2 border-2 rounded text-black border-blue-500 hover:text-orange-600 hover:border-white">
                     <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
                 </button>
             </div>
 
-            <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                <div className="text-lg lg:flex-grow">
+            <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto mr-44">
+                <div className="text-lg lg:flex-grow items-center">
 
-                    <Link to="home">
-                        <span className="block mt-4 lg:inline-block lg:mt-0 text-white border border-transparent px-2 rounded-sm hover:border-white hover:text-orange-600 mr-4">
-                            Shop
-                        </span>
-                    </Link>
-                    {/* <Link to="home">
-                        <span className="block mt-4 lg:inline-block lg:mt-0 text-white border border-transparent px-2 rounded-sm hover:border-white hover:text-orange-600 mr-4">
-                            Home
-                        </span>
-                    </Link> */}
+                    <input
+                        className="shadow appearance-none border rounded py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-3/5 ml-16  "
+                        id="name"
+                        type="name"
+                        placeholder="search..." />
                 </div>
 
                 {!user.email ? <div>
                     <Link to="login">
-                        <span className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-600 mr-4">
+                        <span className="block text-xl mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-600 mr-4">
                             Login
                         </span>
                     </Link>
                     <Link to="register">
-                        <span className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-600 mr-4">
+                        <span className="block text-xl mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-600 mr-4">
                             Register
                         </span>
                     </Link>
@@ -46,14 +44,14 @@ const Navigation = () => {
                     :
                     <div className='flex justify-center align-center'>
                         <Link to="dashboard">
-                            <span className="block mt-4 lg:inline-block lg:mt-0 text-white border border-transparent px-2 rounded-sm hover:border-white hover:text-orange-600 mr-4">
+                            <span className="block mt-4 lg:inline-block lg:mt-0 text-black border border-transparent px-2 rounded-sm hover:border-white hover:text-orange-600 mr-4">
                                 Dashboard
                             </span>
                         </Link>
-                        <button onClick={() => logOut()} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mx-3">
+                        <button onClick={() => logOut()} className="bg-blue-500 hover:bg-blue-400 text-black font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded mx-3">
                             logout
                         </button>
-                        <p className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-600 mr-4">{user.displayName}</p>
+                        <p className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-600 mr-4">{user.displayName}</p>
                     </div>
                 }
             </div>
