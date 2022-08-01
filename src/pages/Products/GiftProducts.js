@@ -18,7 +18,7 @@ const GiftProducts = () => {
 
 
     return (
-        <div className="">
+        <div>
             <div className="max-w-2xl mx-auto py-8 px-4 lg:py-4 sm:py-9 sm:px-6 lg:max-w-7xl lg:px-1">
                 <div>
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-3">Gift</h2>
@@ -27,7 +27,18 @@ const GiftProducts = () => {
                 <hr />
                 <div>
                     <Swiper
-                        slidesPerView={4}
+                        breakpoints={{
+                            // when window width is >= 640px
+                            640: {
+                                width: 640,
+                                slidesPerView: 1,
+                            },
+                            // when window width is >= 768px
+                            768: {
+                                slidesPerView: 4,
+                            },
+                        }}
+                        // slidesPerView={4}
                         spaceBetween={30}
                         slidesPerGroup={3}
                         centeredSlides={true}
@@ -39,7 +50,9 @@ const GiftProducts = () => {
                             "clickable": true
                         }}
                         navigation={true}
-                        className="mySwiper">
+                        className="mySwiper"
+                    >
+
                         {giftProducts.map(product => <SwiperSlide
                             key={product._id}
                             className='hover:shadow-lg my-4 w-96'
