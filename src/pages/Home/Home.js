@@ -10,7 +10,7 @@ const Home = () => {
             <div className='md:container md:mx-auto' >
                 <div id='home'>
                     <Banner></Banner>
-                </div>
+                </div>           
                 <Products></Products>
                 <Reviews></Reviews>
             </div>

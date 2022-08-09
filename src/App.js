@@ -26,13 +26,9 @@ import MyOrders from './pages/Dashboard/User/MyOrders';
 import GiveReview from './pages/Dashboard/User/GiveReview';
 import Payment from './pages/Dashboard/User/Payment';
 
-
 function App() {
   return (
-
     <div>
-
-
       <AuthProvider>
         <BrowserRouter>
           <Navigation />

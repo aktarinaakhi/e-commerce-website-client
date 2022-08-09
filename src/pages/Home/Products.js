@@ -31,6 +31,7 @@ const Products = () => {
     }
     return (
         <>
+        
             <CombineFourProducts handleAddToCart={handleAddToCart}></CombineFourProducts>
             <GamingProducts handleAddToCart={handleAddToCart} cart={cart}></GamingProducts>
             <HomeAndKitchenProducts handleAddToCart={handleAddToCart} ></HomeAndKitchenProducts>

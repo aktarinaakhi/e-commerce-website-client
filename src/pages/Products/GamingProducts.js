@@ -28,21 +28,17 @@ const GamingProducts = ({ handleAddToCart }) => {
         <>
 
             <div>
-                <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1">
+                <div className="max-w-2xl mx-auto pt-16 px-4 lg:pb-1 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-1 lg:mt-40">
                     <div className='flex justify-between'>
                         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Gaming accessories</h2>
-
                         <div className='text-blue-700'>
                             <Link to="/allGamingProducts">
                                 <button className='bg-transparent mr-2 mb-4'>See more</button>
-
                             </Link>
                             <FontAwesomeIcon icon={faChevronRight} />
                         </div>
-
                     </div>
                     <hr />
-
                     <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-1">
                         {gamingState.slice(0, 5).map((product) => (
                             <div key={product._id} className="group relative hover:shadow-lg px-3 lg:h-4/5">

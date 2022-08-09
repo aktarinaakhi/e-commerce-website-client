@@ -36,7 +36,7 @@ const Reviews = () => {
                             allReviews.map((review) => <SwiperSlide key={review._id}>
                                 <div className="flex flex-col items-center pb-10 my-7 max-w-lg shadow-lg mx-7 rounded-lg">
                                     <img className="mb-3 w-24 h-24 rounded-full shadow-lg"
-                                        src={review?.img}
+                                        src={review?.image}
                                         alt={review?.img} />
                                     <h3 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{review?.name}</h3>
                                     <span className="text-sm text-gray-500 dark:text-gray-400">{review?.profession}</span>
