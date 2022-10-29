@@ -6,15 +6,6 @@ import { Link } from 'react-router-dom';
 import { fetchProducts } from '../../Redux/slices/productSlice';
 
 const GamingProducts = ({ handleAddToCart }) => {
-    // const [show, setShow] = useState(false);
-
-    // const showModal = () => {
-    //     setShow(true);
-    // }
-    // const hideModal = () => {
-    //     setShow(false);
-    // }
-    
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchProducts());
@@ -22,7 +13,6 @@ const GamingProducts = ({ handleAddToCart }) => {
 
     const productState = useSelector(state => state.products.allProducts);
     const gamingState = productState.filter(gaming => gaming.category === 'Gaming accessories');
-
 
     return (
         <>

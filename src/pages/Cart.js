@@ -28,9 +28,7 @@ const Cart = ({ singleProduct, children }) => {
                     <h4> Total amount : BDT {taxTotal.toFixed(2)}</h4>
                 </div>
                 <div className='my-5'>
-
                     {children}
-
                 </div>
 
             </div>

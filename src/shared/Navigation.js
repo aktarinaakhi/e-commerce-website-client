@@ -48,7 +48,7 @@ const Navigation = () => {
                         <BsFillCartCheckFill style={{fontSize:"28px"}} />
 
                         <Link to="dashboard">
-                            <span className="block mt-4 lg:inline-block lg:mt-0 text-black border border-transparent px-2 rounded-sm hover:border-white hover:text-orange-600 mr-4 text-lg">
+                            <span className="block mt-4 lg:inline-block lg:mt-0 text-black border border-transparent px-2 rounded-sm hover:border-white hover:text-orange-600 mr-1 text-lg">
                                 Dashboard
                             </span>
                         </Link>
